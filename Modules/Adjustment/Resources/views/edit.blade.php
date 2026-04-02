@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Adjustment')
+@section('title', __('Edit Adjustment'))
 
 @push('page_css')
     @livewireStyles
@@ -8,9 +8,9 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('adjustments.index') }}">Adjustments</a></li>
-        <li class="breadcrumb-item active">Edit</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('adjustments.index') }}">{{ __('Adjustments') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Edit') }}</li>
     </ol>
 @endsection
 
@@ -32,15 +32,19 @@
                             @method('patch')
                             <div class="form-row">
                                 <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="note">{{ __('Note (If Needed)') }}</label>
+                                <textarea name="note" id="note" rows="5" class="form-control">{{ $adjustment->note }}</textarea>
+                            </div>
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('Reference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required value="{{ $adjustment->getAttributes()['reference'] }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('Date') }} <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required value="{{ $adjustment->getAttributes()['date'] }}">
                                         </div>
                                     </div>

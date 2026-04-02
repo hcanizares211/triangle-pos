@@ -42,14 +42,14 @@
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Method</label>
+                                    <label>{{ __('Payment Method') }}</label>
                                     <select wire:model="payment_method" class="form-control" name="payment_method">
                                         <option value="">Select Payment Method</option>
-                                        <option value="Cash">Cash</option>
-                                        <option value="Credit Card">Credit Card</option>
-                                        <option value="Bank Transfer">Bank Transfer</option>
-                                        <option value="Cheque">Cheque</option>
-                                        <option value="Other">Other</option>
+                                        <option value="Cash">{{ __('Cash') }}</option>
+                                        <option value="Credit Card">{{ __('Credit Card') }}</option>
+                                        <option value="Bank Transfer">{{ __('Bank Transfer') }}</option>
+                                        <option value="Cheque">{{ __('Cheque') }}</option>
+                                        <option value="Other">{{ __('Other') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -57,8 +57,7 @@
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i> {{ __('Filter Report') }}
                             </button>
                         </div>
                     </form>
@@ -80,11 +79,11 @@
                             </div>
                             <thead>
                             <tr>
-                                <th>Date</th>
-                                <th>Reference</th>
+                                <th>{{ __('Date') }}</th>
+                                <th>{{ __('Reference') }}</th>
                                 <th>{{ ucwords(str_replace('_', ' ', $payments)) }}</th>
-                                <th>Total</th>
-                                <th>Payment Method</th>
+                                <th>{{ __('Total') }}</th>
+                                <th>{{ __('Payment Method') }}</th>
                             </tr>
                             </thead>
                             <tbody>

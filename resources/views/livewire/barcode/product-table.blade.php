@@ -15,10 +15,9 @@
                 <table class="table table-bordered mb-0">
                     <thead>
                     <tr class="align-middle">
-                        <th class="align-middle">Product Name</th>
-                        <th class="align-middle">Code</th>
-                        <th class="align-middle">
-                            Quantity <i class="bi bi-question-circle-fill text-info" data-toggle="tooltip" data-placement="top" title="Max Quantity: 100"></i>
+                        <th class="align-middle">{{ __('Product Name') }}</th>
+                        <th class="align-middle">{{ __('Code') }}</th>
+                        <th class="align-middle">{{ __('Quantity') }} <i class="bi bi-question-circle-fill text-info" data-toggle="tooltip" data-placement="top" title="Max Quantity: 100"></i>
                         </th>
                     </tr>
                     </thead>
@@ -31,8 +30,8 @@
                                 <input wire:model.live="quantity" class="form-control" type="number" min="1" max="100" value="{{ $quantity }}">
                             </td>
                         @else
-                            <td colspan="3" class="text-center">
-                                <span class="text-danger">Please search & select a product!</span>
+                                <td colspan="3" class="text-center">
+                                <span class="text-danger">{{ __('Please search & select a product!') }}</span>
                             </td>
                         @endif
                     </tr>
@@ -41,25 +40,25 @@
             </div>
             <div class="mt-3">
                 <button wire:click="generateBarcodes({{ $product }}, {{ $quantity }})" type="button" class="btn btn-primary">
-                    <i class="bi bi-upc-scan"></i> Generate Barcodes
+                    <i class="bi bi-upc-scan"></i> {{ __('Generate Barcodes') }}
                 </button>
             </div>
         </div>
     </div>
 
     <div wire:loading wire:target="generateBarcodes" class="w-100">
-        <div class="d-flex justify-content-center">
+                <div class="d-flex justify-content-center">
             <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">{{ __('Loading...') }}</span>
             </div>
         </div>
     </div>
 
     @if(!empty($barcodes))
-        <div class="text-right mb-3">
+                <div class="text-right mb-3">
             <button wire:click="getPdf" wire:loading.attr="disabled" type="button" class="btn btn-primary">
                 <span wire:loading wire:target="getPdf" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                <i wire:loading.remove wire:target="getPdf" class="bi bi-file-earmark-pdf"></i> Download PDF
+                <i wire:loading.remove wire:target="getPdf" class="bi bi-file-earmark-pdf"></i> {{ __('Download PDF') }}
             </button>
         </div>
         <div class="card">
@@ -74,7 +73,7 @@
                                 {!! $barcode !!}
                             </div>
                             <p style="font-size: 15px;color: #000;">
-                                Price:: {{ format_currency($product->product_price) }}
+                                {{ __('Price') }}:: {{ format_currency($product->product_price) }}
                             </p>
                         </div>
                     @endforeach

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Units')
+@section('title', __('Units'))
 
 @section('third_party_stylesheets')
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap4.min.css">
@@ -9,8 +9,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item active">Units</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Units') }}</li>
     </ol>
 @endsection
 
@@ -31,11 +31,11 @@
                                 <thead>
                                 <tr>
                                     <th class="align-middle">No.</th>
-                                    <th class="align-middle">Name</th>
-                                    <th class="align-middle">Short Name</th>
-                                    <th class="align-middle">Operator</th>
-                                    <th class="align-middle">Operation Value</th>
-                                    <th class="align-middle">Action</th>
+                                    <th class="align-middle">{{ __('Name') }}</th>
+                                    <th class="align-middle">{{ __('Short Name') }}</th>
+                                    <th class="align-middle">{{ __('Operator') }}</th>
+                                    <th class="align-middle">{{ __('Operation Value') }}</th>
+                                    <th class="align-middle">{{ __('Action') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>

@@ -12,19 +12,19 @@
     <div class="table-responsive">
         <div wire:loading.flex class="col-12 position-absolute justify-content-center align-items-center" style="top:0;right:0;left:0;bottom:0;background-color: rgba(255,255,255,0.5);z-index: 99;">
             <div class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
+                <span class="sr-only">{{ __('Loading...') }}</span>
             </div>
         </div>
         <table class="table table-bordered">
             <thead>
             <tr class="align-middle">
                 <th class="align-middle">#</th>
-                <th class="align-middle">Product Name</th>
-                <th class="align-middle">Code</th>
-                <th class="align-middle">Stock</th>
-                <th class="align-middle">Quantity</th>
-                <th class="align-middle">Type</th>
-                <th class="align-middle">Action</th>
+                <th class="align-middle">{{ __('Product Name') }}</th>
+                <th class="align-middle">{{ __('Code') }}</th>
+                <th class="align-middle">{{ __('Stock') }}</th>
+                <th class="align-middle">{{ __('Quantity') }}</th>
+                <th class="align-middle">{{ __('Type') }}</th>
+                <th class="align-middle">{{ __('Action') }}</th>
             </tr>
             </thead>
             <tbody>
@@ -47,19 +47,19 @@
                             @if(isset($product['type']))
                                 @if($product['type'] == 'add')
                                     <select name="types[]" class="form-control">
-                                        <option value="add" selected>(+) Addition</option>
-                                        <option value="sub">(-) Subtraction</option>
+                                        <option value="add" selected>{{ __('(+) Addition') }}</option>
+                                        <option value="sub">{{ __('(-) Subtraction') }}</option>
                                     </select>
                                 @elseif($product['type'] == 'sub')
                                     <select name="types[]" class="form-control">
-                                        <option value="sub" selected>(-) Subtraction</option>
-                                        <option value="add">(+) Addition</option>
+                                        <option value="sub" selected>{{ __('(-) Subtraction') }}</option>
+                                        <option value="add">{{ __('(+) Addition') }}</option>
                                     </select>
                                 @endif
                             @else
                                 <select name="types[]" class="form-control">
-                                    <option value="add">(+) Addition</option>
-                                    <option value="sub">(-) Subtraction</option>
+                                    <option value="add">{{ __('(+) Addition') }}</option>
+                                    <option value="sub">{{ __('(-) Subtraction') }}</option>
                                 </select>
                             @endif
                         </td>
@@ -72,9 +72,9 @@
                 @endforeach
             @else
                 <tr>
-                    <td colspan="7" class="text-center">
+                        <td colspan="7" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            {{ __('Please search & select products!') }}
                         </span>
                     </td>
                 </tr>

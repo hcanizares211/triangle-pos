@@ -48,43 +48,55 @@ class SalesDataTable extends DataTable
                                 'tr' .
                                 <'row'<'col-md-5'i><'col-md-7 mt-2'p>>")
             ->orderBy(8)
+            ->parameters([
+                'language' => [
+                    'url' => '//cdn.datatables.net/plug-ins/1.13.6/i18n/es-ES.json'
+                ]
+            ])
             ->buttons(
                 Button::make('excel')
-                    ->text('<i class="bi bi-file-earmark-excel-fill"></i> Excel'),
+                    ->text('<i class="bi bi-file-earmark-excel-fill"></i> ' . __('Excel')),
                 Button::make('print')
-                    ->text('<i class="bi bi-printer-fill"></i> Print'),
+                    ->text('<i class="bi bi-printer-fill"></i> ' . __('Print')),
                 Button::make('reset')
-                    ->text('<i class="bi bi-x-circle"></i> Reset'),
+                    ->text('<i class="bi bi-x-circle"></i> ' . __('Reset')),
                 Button::make('reload')
-                    ->text('<i class="bi bi-arrow-repeat"></i> Reload')
+                    ->text('<i class="bi bi-arrow-repeat"></i> ' . __('Reload'))
             );
     }
 
     protected function getColumns() {
         return [
             Column::make('reference')
+                ->title(__('Reference'))
                 ->className('text-center align-middle'),
 
             Column::make('customer_name')
-                ->title('Customer')
+                ->title(__('Customer'))
                 ->className('text-center align-middle'),
 
             Column::computed('status')
+                ->title(__('Status'))
                 ->className('text-center align-middle'),
 
             Column::computed('total_amount')
+                ->title(__('Total Amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('paid_amount')
+                ->title(__('Paid Amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('due_amount')
+                ->title(__('Due Amount'))
                 ->className('text-center align-middle'),
 
             Column::computed('payment_status')
+                ->title(__('Payment Status'))
                 ->className('text-center align-middle'),
 
             Column::computed('action')
+                ->title(__('Action'))
                 ->exportable(false)
                 ->printable(false)
                 ->className('text-center align-middle'),

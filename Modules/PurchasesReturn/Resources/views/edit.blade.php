@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Purchase Return')
+@section('title', __('Edit Purchase Return'))
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('purchase-returns.index') }}">Purchase Returns</a></li>
-        <li class="breadcrumb-item active">Edit</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('purchase-returns.index') }}">{{ __('Purchase Returns') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Edit') }}</li>
     </ol>
 @endsection
 
@@ -29,14 +29,14 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('Reference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required value="{{ $purchase_return->reference }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="supplier_id">Supplier <span class="text-danger">*</span></label>
+                                            <label for="supplier_id">{{ __('Supplier') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="supplier_id" id="supplier_id" required>
                                                 @foreach(\Modules\People\Entities\Supplier::all() as $supplier)
                                                     <option {{ $purchase_return->supplier_id == $supplier->id ? 'selected' : '' }} value="{{ $supplier->id }}">{{ $supplier->supplier_name }}</option>
@@ -48,7 +48,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="date">Date <span class="text-danger">*</span></label>
+                                            <label for="date">{{ __('Date') }} <span class="text-danger">*</span></label>
                                             <input type="date" class="form-control" name="date" required value="{{ $purchase_return->date }}">
                                         </div>
                                     </div>
@@ -60,7 +60,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="status">Status <span class="text-danger">*</span></label>
+                                        <label for="status">{{ __('Status') }} <span class="text-danger">*</span></label>
                                         <select class="form-control" name="status" id="status" required>
                                             <option {{ $purchase_return->status == 'Pending' ? 'selected' : '' }} value="Pending">Pending</option>
                                             <option {{ $purchase_return->status == 'Shipped' ? 'selected' : '' }} value="Shipped">Shipped</option>
@@ -71,7 +71,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('Payment Method') }} <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="payment_method" required value="{{ $purchase_return->payment_method }}" readonly>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note (If Needed)</label>
+                                <label for="note">{{ __('Note (If Needed)') }}</label>
                                 <textarea name="note" id="note" rows="5" class="form-control">{{ $purchase_return->note }}</textarea>
                             </div>
 

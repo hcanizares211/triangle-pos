@@ -65,9 +65,9 @@
             </p>
         </div>
         <p>
-            Date: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}<br>
-            Reference: {{ $sale->reference }}<br>
-            Name: {{ $sale->customer_name }}
+            {{ __('Date') }}: {{ \Carbon\Carbon::parse($sale->date)->format('d M, Y') }}<br>
+            {{ __('Reference') }}: {{ $sale->reference }}<br>
+            {{ __('Name') }}: {{ $sale->customer_name }}
         </p>
         <table class="table-data">
             <tbody>
@@ -83,24 +83,24 @@
 
             @if($sale->tax_percentage)
                 <tr>
-                    <th colspan="2" style="text-align:left">Tax ({{ $sale->tax_percentage }}%)</th>
+                    <th colspan="2" style="text-align:left">{{ __('Tax') }} ({{ $sale->tax_percentage }}%)</th>
                     <th style="text-align:right">{{ format_currency($sale->tax_amount) }}</th>
                 </tr>
             @endif
             @if($sale->discount_percentage)
                 <tr>
-                    <th colspan="2" style="text-align:left">Discount ({{ $sale->discount_percentage }}%)</th>
+                    <th colspan="2" style="text-align:left">{{ __('Discount') }} ({{ $sale->discount_percentage }}%)</th>
                     <th style="text-align:right">{{ format_currency($sale->discount_amount) }}</th>
                 </tr>
             @endif
             @if($sale->shipping_amount)
                 <tr>
-                    <th colspan="2" style="text-align:left">Shipping</th>
+                    <th colspan="2" style="text-align:left">{{ __('Shipping') }}</th>
                     <th style="text-align:right">{{ format_currency($sale->shipping_amount) }}</th>
                 </tr>
             @endif
             <tr>
-                <th colspan="2" style="text-align:left">Grand Total</th>
+                <th colspan="2" style="text-align:left">{{ __('Grand Total') }}</th>
                 <th style="text-align:right">{{ format_currency($sale->total_amount) }}</th>
             </tr>
             </tbody>
@@ -109,10 +109,10 @@
             <tbody>
                 <tr style="background-color:#ddd;">
                     <td class="centered" style="padding: 5px;">
-                        Paid By: {{ $sale->payment_method }}
+                        {{ __('Paid By') }}: {{ $sale->payment_method }}
                     </td>
                     <td class="centered" style="padding: 5px;">
-                        Amount: {{ format_currency($sale->paid_amount) }}
+                        {{ __('Amount') }}: {{ format_currency($sale->paid_amount) }}
                     </td>
                 </tr>
                 <tr style="border-bottom: 0;">

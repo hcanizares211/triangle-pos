@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <form id="login" method="post" action="{{ url('/login') }}">
                         @csrf
-                        <h1>Login</h1>
+                        <h1>{{ __('Login') }}</h1>
                         <p class="text-muted">Sign In to your account</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">

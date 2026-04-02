@@ -25,7 +25,7 @@
                             </div>
                             <div class="col-lg-4">
                                 <div class="form-group">
-                                    <label>Customer</label>
+                                    <label>{{ __('Customer') }}</label>
                                     <select wire:model="customer_id" class="form-control" name="customer_id">
                                         <option value="">Select Customer</option>
                                         @foreach($customers as $customer)
@@ -38,23 +38,23 @@
                         <div class="form-row">
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Status</label>
+                                    <label>{{ __('Status') }}</label>
                                     <select wire:model="sale_status" class="form-control" name="sale_status">
                                         <option value="">Select Status</option>
-                                        <option value="Pending">Pending</option>
-                                        <option value="Shipped">Shipped</option>
-                                        <option value="Completed">Completed</option>
+                                        <option value="Pending">{{ __('Pending') }}</option>
+                                        <option value="Shipped">{{ __('Shipped') }}</option>
+                                        <option value="Completed">{{ __('Completed') }}</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="form-group">
-                                    <label>Payment Status</label>
+                                    <label>{{ __('Payment Status') }}</label>
                                     <select wire:model="payment_status" class="form-control" name="payment_status">
                                         <option value="">Select Payment Status</option>
-                                        <option value="Paid">Paid</option>
-                                        <option value="Unpaid">Unpaid</option>
-                                        <option value="Partial">Partial</option>
+                                        <option value="Paid">{{ __('Paid') }}</option>
+                                        <option value="Unpaid">{{ __('Unpaid') }}</option>
+                                        <option value="Partial">{{ __('Partial') }}</option>
                                     </select>
                                 </div>
                             </div>
@@ -62,8 +62,7 @@
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i> {{ __('Filter Report') }}
                             </button>
                         </div>
                     </form>
@@ -84,14 +83,14 @@
                         </div>
                         <thead>
                         <tr>
-                            <th>Date</th>
-                            <th>Reference</th>
-                            <th>Customer</th>
-                            <th>Status</th>
-                            <th>Total</th>
-                            <th>Paid</th>
+                            <th>{{ __('Date') }}</th>
+                            <th>{{ __('Reference') }}</th>
+                            <th>{{ __('Customer') }}</th>
+                            <th>{{ __('Status') }}</th>
+                            <th>{{ __('Total') }}</th>
+                            <th>{{ __('Paid') }}</th>
                             <th>Due</th>
-                            <th>Payment Status</th>
+                            <th>{{ __('Payment Status') }}</th>
                         </tr>
                         </thead>
                         <tbody>

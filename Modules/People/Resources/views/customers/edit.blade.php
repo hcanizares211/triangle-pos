@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Edit Customer')
+@section('title', __('Edit Customer'))
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('customers.index') }}">Customers</a></li>
-        <li class="breadcrumb-item active">Edit</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('customers.index') }}">{{ __('Customers') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Edit') }}</li>
     </ol>
 @endsection
 
@@ -28,13 +28,13 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="customer_name">Customer Name <span class="text-danger">*</span></label>
+                                        <label for="customer_name">{{ __('Customer Name') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="customer_name" required value="{{ $customer->customer_name }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="customer_email">Email <span class="text-danger">*</span></label>
+                                        <label for="customer_email">{{ __('Email') }} <span class="text-danger">*</span></label>
                                         <input type="email" class="form-control" name="customer_email" required value="{{ $customer->customer_email }}">
                                     </div>
                                 </div>
@@ -43,19 +43,19 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="customer_phone">Phone <span class="text-danger">*</span></label>
+                                        <label for="customer_phone">{{ __('Phone') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="customer_phone" required value="{{ $customer->customer_phone }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="city">City <span class="text-danger">*</span></label>
+                                        <label for="city">{{ __('City') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="city" required value="{{ $customer->city }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="country">Country <span class="text-danger">*</span></label>
+                                        <label for="country">{{ __('Country') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="country" required value="{{ $customer->country }}">
                                     </div>
                                 </div>
@@ -64,7 +64,7 @@
                             <div class="form-row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label for="address">Address <span class="text-danger">*</span></label>
+                                        <label for="address">{{ __('Address') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="address" required value="{{ $customer->address }}">
                                     </div>
                                 </div>

@@ -1,9 +1,9 @@
-<a href="{{ route('product-categories.edit', $data->id) }}" class="btn btn-info btn-sm">
+<a href="{{ route('product-categories.edit', $data->id) }}" class="btn btn-info btn-sm" title="{{ __('Edit') }}">
     <i class="bi bi-pencil"></i>
 </a>
-<button id="delete" class="btn btn-danger btn-sm" onclick="
+<button id="delete" class="btn btn-danger btn-sm" title="{{ __('Delete') }}" onclick="
     event.preventDefault();
-    if (confirm('Are you sure? It will delete the data permanently!')) {
+    if (confirm('{{ __('Are you sure? It will delete the data permanently!') }}')) {
         document.getElementById('destroy{{ $data->id }}').submit();
     }
     ">

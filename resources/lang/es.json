@@ -1,0 +1,308 @@
+{
+    "Home": "Inicio",
+    "Products": "Productos",
+    "Product": "Producto",
+    "Categories": "Categorías",
+    "Category": "Categoría",
+    "Create Product": "Crear Producto",
+    "All Products": "Todos los Productos",
+    "Edit Product": "Editar Producto",
+    "Print Barcode": "Imprimir Código de Barras",
+    "Stock Adjustments": "Ajustes de Stock",
+    "Adjustments": "Ajustes",
+    "Adjustment": "Ajuste",
+    "Create Adjustment": "Crear Ajuste",
+    "Edit Adjustment": "Editar Ajuste",
+    "All Adjustments": "Todos los Ajustes",
+    "Quotations": "Cotizaciones",
+    "Quotation": "Cotización",
+    "Create Quotation": "Crear Cotización",
+    "Edit Quotation": "Editar Cotización",
+    "All Quotations": "Todas las Cotizaciones",
+    "Purchases": "Compras",
+    "Purchase": "Compra",
+    "Create Purchase": "Crear Compra",
+    "Edit Purchase": "Editar Compra",
+    "All Purchases": "Todas las Compras",
+    "Purchase Returns": "Devoluciones de Compra",
+    "Purchase Return": "Devolución de Compra",
+    "Create Purchase Return": "Crear Devolución de Compra",
+    "Edit Purchase Return": "Editar Devolución de Compra",
+    "All Purchase Returns": "Todas las Devoluciones de Compra",
+    "Sales": "Ventas",
+    "Sale": "Venta",
+    "Create Sale": "Crear Venta",
+    "Edit Sale": "Editar Venta",
+    "All Sales": "Todas las Ventas",
+    "POS System": "Sistema POS",
+    "Sale Returns": "Devoluciones de Venta",
+    "Sale Return": "Devolución de Venta",
+    "Create Sale Return": "Crear Devolución de Venta",
+    "Edit Sale Return": "Editar Devolución de Venta",
+    "All Sale Returns": "Todas las Devoluciones de Venta",
+    "Expenses": "Gastos",
+    "Expense": "Gasto",
+    "Create Expense": "Crear Gasto",
+    "Edit Expense": "Editar Gasto",
+    "All Expenses": "Todos los Gastos",
+    "Expense Categories": "Categorías de Gastos",
+    "Expense Category": "Categoría de Gasto",
+    "Create Expense Category": "Crear Categoría de Gasto",
+    "Edit Expense Category": "Editar Categoría de Gasto",
+    "Customers": "Clientes",
+    "Customer": "Cliente",
+    "Create Customer": "Crear Cliente",
+    "Edit Customer": "Editar Cliente",
+    "All Customers": "Todos los Clientes",
+    "Suppliers": "Proveedores",
+    "Supplier": "Proveedor",
+    "Create Supplier": "Crear Proveedor",
+    "Edit Supplier": "Editar Proveedor",
+    "All Suppliers": "Todos los Proveedores",
+    "Reports": "Reportes",
+    "Report": "Reporte",
+    "Sales Report": "Reporte de Ventas",
+    "Purchases Report": "Reporte de Compras",
+    "Sales Return Report": "Reporte de Devoluciones de Venta",
+    "Purchases Return Report": "Reporte de Devoluciones de Compra",
+    "Payments Report": "Reporte de Pagos",
+    "Profit Loss Report": "Reporte de Ganancias y Pérdidas",
+    "Settings": "Configuración",
+    "Setting": "Configuración",
+    "Currencies": "Monedas",
+    "Currency": "Moneda",
+    "Create Currency": "Crear Moneda",
+    "Edit Currency": "Editar Moneda",
+    "Units": "Unidades",
+    "Unit": "Unidad",
+    "Create Unit": "Crear Unidad",
+    "Edit Unit": "Editar Unidad",
+    "Users": "Usuarios",
+    "User": "Usuario",
+    "Create User": "Crear Usuario",
+    "Edit User": "Editar Usuario",
+    "User Profile": "Perfil de Usuario",
+    "Roles": "Roles",
+    "Role": "Rol",
+    "Create Role": "Crear Rol",
+    "Edit Role": "Editar Rol",
+    "Dashboard": "Panel Principal",
+    "Profile": "Perfil",
+    "Logout": "Cerrar Sesión",
+    "Login": "Iniciar Sesión",
+    "Register": "Registrarse",
+    "Online": "En Línea",
+    "Create": "Crear",
+    "Edit": "Editar",
+    "Delete": "Eliminar",
+    "View": "Ver",
+    "Show": "Ver",
+    "Save": "Guardar",
+    "Cancel": "Cancelar",
+    "Submit": "Enviar",
+    "Add": "Agregar",
+    "Update": "Actualizar",
+    "Remove": "Eliminar",
+    "Search": "Buscar",
+    "Filter": "Filtrar",
+    "Export": "Exportar",
+    "Print": "Imprimir",
+    "Download": "Descargar",
+    "Upload": "Subir",
+    "Back": "Volver",
+    "Close": "Cerrar",
+    "Yes": "Sí",
+    "No": "No",
+    "Actions": "Acciones",
+    "Action": "Acción",
+    "Status": "Estado",
+    "Payment Status": "Estado de Pago",
+    "Payment Method": "Método de Pago",
+    "Name": "Nombre",
+    "Code": "Código",
+    "Email": "Correo Electrónico",
+    "Phone": "Teléfono",
+    "Address": "Dirección",
+    "Date": "Fecha",
+    "Amount": "Monto",
+    "Quantity": "Cantidad",
+    "Price": "Precio",
+    "Cost": "Costo",
+    "Total": "Total",
+    "Tax": "Impuesto",
+    "Discount": "Descuento",
+    "Reference": "Referencia",
+    "Shipping": "Envío",
+    "Grand Total": "Total General",
+    "Paid By": "Pagado Por",
+    "Note": "Nota",
+    "Notes": "Notas",
+    "Description": "Descripción",
+    "Pending": "Pendiente",
+    "Shipped": "Enviado",
+    "Completed": "Completado",
+    "Cancelled": "Cancelado",
+    "Partial": "Parcial",
+    "Paid": "Pagado",
+    "Unpaid": "Sin Pagar",
+    "Active": "Activo",
+    "Inactive": "Inactivo",
+    "Cash": "Efectivo",
+    "Credit Card": "Tarjeta de Crédito",
+    "Bank Transfer": "Transferencia Bancaria",
+    "Cheque": "Cheque",
+    "Other": "Otro",
+    "Revenue": "Ingresos",
+    "Sales Return": "Devol. de Venta",
+    "Purchases Return": "Devol. de Compra",
+    "Profit": "Ganancia",
+    "Loss": "Pérdida",
+    "Stock": "Stock",
+    "Balance": "Saldo",
+    "Add Product": "Agregar Producto",
+    "Product Name": "Nombre del Producto",
+    "Product Code": "Código del Producto",
+    "Product Category": "Categoría del Producto",
+    "Unit Price": "Precio Unitario",
+    "Selling Price": "Precio de Venta",
+    "Cost Price": "Precio de Costo",
+    "Current Stock": "Stock Actual",
+    "Alert Quantity": "Cantidad de Alerta",
+    "Barcode Symbology": "Simbología del Código de Barras",
+    "Image": "Imagen",
+    "Profile Image": "Imagen de Perfil",
+    "Current Password": "Contraseña Actual",
+    "New Password": "Nueva Contraseña",
+    "Confirm Password": "Confirmar Contraseña",
+    "Password": "Contraseña",
+    "Update Profile": "Actualizar Perfil",
+    "Update Password": "Actualizar Contraseña",
+    "Customer Name": "Nombre del Cliente",
+    "Supplier Name": "Nombre del Proveedor",
+    "Tax Number": "Número Fiscal",
+    "Open Balance": "Saldo Inicial",
+    "City": "Ciudad",
+    "Country": "País",
+    "State": "Estado",
+    "Permission": "Permiso",
+    "Permissions": "Permisos",
+    "Page Not Found": "Página No Encontrada",
+    "Server Error": "Error del Servidor",
+    "Go Home": "Ir al Inicio",
+    "Forbidden": "Acceso Prohibido",
+    "Sign In to your account": "Inicia sesión en tu cuenta",
+    "Sub Total": "Subtotal",
+    "Due Amount": "Monto Pendiente",
+    "Paid Amount": "Monto Pagado",
+    "Send Email": "Enviar Correo",
+    "Select": "Seleccionar",
+    "All": "Todos",
+    "Role Name": "Nombre del Rol",
+    "Operator": "Operador",
+    "Operation Value": "Valor de Operación",
+    "Short Name": "Nombre Corto",
+    "Unit Name": "Nombre de la Unidad",
+    "Company Name": "Nombre de la Empresa",
+    "Company Email": "Correo de la Empresa",
+    "Company Phone": "Teléfono de la Empresa",
+    "Company Address": "Dirección de la Empresa",
+    "Notification Email": "Correo de Notificaciones",
+    "Default Currency": "Moneda Predeterminada",
+    "Currency Position": "Posición de Moneda",
+    "Prefix": "Prefijo",
+    "Suffix": "Sufijo",
+    "Footer Text": "Texto del Pie de Página",
+    "Hello": "Hola",
+    "Filter Report": "Filtrar Reporte",
+    "Currency Name": "Nombre de Moneda",
+    "Symbol": "Símbolo",
+    "Exchange Rate": "Tasa de Cambio",
+    "Thousand Separator": "Separador de Miles",
+    "Decimal Separator": "Separador Decimal",
+    "Sales Payments": "Pagos de Ventas",
+    "Purchase Payments": "Pagos de Compras",
+    "Sale Return Payments": "Pagos de Dev. de Venta",
+    "Purchase Return Payments": "Pagos de Dev. de Compra",
+    "Add Adjustment": "Agregar Ajuste",
+    "Change your profile information & password from here...": "Cambia tu información de perfil y contraseña desde aquí...",
+    "Select Customer": "Seleccionar Cliente",
+    "Select Supplier": "Seleccionar Proveedor",
+    "Select Category": "Seleccionar Categoría",
+    "Select Status": "Seleccionar Estado",
+    "Select Payment Method": "Seleccionar Método de Pago",
+    "Select Currency": "Seleccionar Moneda",
+    "Select Unit": "Seleccionar Unidad",
+    "Permissions": "Permisos"
+    ,"Add Sale": "Agregar Venta"
+    ,"Total Amount": "Importe Total"
+    ,"Excel": "Excel"
+    ,"Reset": "Restablecer"
+    ,"Reload": "Recargar"
+    ,"Previous": "Anterior"
+    ,"Next": "Siguiente"
+    ,"Show": "Mostrar"
+    ,"entries": "entradas"
+    ,"POS Invoice": "Factura POS"
+    ,"Show Payments": "Mostrar Pagos"
+    ,"Add Payment": "Agregar Pago"
+    ,"Details": "Detalles"
+    ,"Are you sure? It will delete the data permanently!": "¿Estás seguro? ¡Esto eliminará los datos permanentemente!"
+        ,"Sales & Purchases of Last 7 Days": "Ventas y Compras (Últimos 7 Días)"
+        ,"Overview of :period": "Resumen de :period"
+        ,"Monthly Cash Flow (Payment Sent & Received)": "Flujo de Caja Mensual (Pagos Enviados y Recibidos)"
+        ,"Payment Sent": "Pago Enviado"
+        ,"Payment Received": "Pago Recibido"
+        ,"Product Categories": "Categorías de Productos"
+        ,"Add Category": "Agregar Categoría"
+        ,"Category Code": "Código de Categoría"
+        ,"Category Name": "Nombre de Categoría"
+        ,"Products Count": "Cantidad de Productos"
+        ,"Create Category": "Crear Categoría"
+        ,"Edit Product Category": "Editar Categoría de Producto"
+        ,"Select Category": "Seleccionar Categoría"
+        ,"Add": "Agregar"
+        ,"Select Symbology": "Seleccionar Símología"
+        ,"Select Tax Type": "Seleccionar Tipo de Impuesto"
+        ,"Select Unit": "Seleccionar Unidad"
+        ,"None": "Ninguno"
+        ,"Update Product": "Actualizar Producto"
+        ,"Tax type": "Tipo de Impuesto"
+        ,"Exclusive": "Exclusivo"
+        ,"Inclusive": "Inclusivo"
+        ,"Product Images": "Imágenes del Producto"
+        ,"Remove": "Eliminar"
+        ,"This short text will be placed after Product Quantity.": "Este texto corto se ubicará después de la cantidad del producto."
+        ,"Max Files: 3, Max File Size: 1MB, Image Size: 400x400": "Archivos máximos: 3, Tamaño máximo: 1MB, Tamaño de imagen: 400x400"
+        ,"Type product name or code....": "Escribe el nombre o código del producto...."
+        ,"Loading...": "Cargando..."
+        ,"Load More": "Cargar más"
+        ,"No Product Found....": "No se encontró producto...."
+        ,"Please search & select a product!": "¡Por favor busca y selecciona un producto!"
+        ,"Generate Barcodes": "Generar Códigos de Barras"
+        ,"Download PDF": "Descargar PDF"
+        ,"NOTE: Product Code must be a number to generate barcodes!": "NOTA: ¡El código del producto debe ser un número para generar códigos de barras!"
+        ,"Max quantity is 100 per barcode generation!": "¡La cantidad máxima es 100 por generación de códigos de barras!"
+        ,"Can not generate Barcode with this type of Product Code": "No se puede generar el código de barras con este tipo de código de producto"
+        ,"Barcodes": "Códigos de Barras"
+        ,"Price": "Precio"
+        ,"Already exists in the product list!": "¡Ya existe en la lista de productos!"
+        ,"Something went wrong!": "¡Algo salió mal!"
+        ,"Please search & select products!": "¡Por favor busca y selecciona productos!"
+        ,"Type": "Tipo"
+        ,"(+) Addition": "(+) Adición"
+        ,"(-) Subtraction": "(-) Sustracción"
+        ,"Note (If Needed)": "Nota (si es necesario)"
+        ,"Net Unit Price": "Precio Neto Unitario"
+        ,"Make Sale": "Crear Venta"
+        ,"Send On Email": "Enviar por Correo"
+        ,"Amount Received": "Monto Recibido"
+        ,"Add Quotation": "Agregar Cotización"
+        ,"Update Quotation": "Actualizar Cotización"
+        ,"Sent": "Enviado"
+            ,"Add Supplier": "Agregar Proveedor"
+            ,"Supplier Email": "Correo del Proveedor"
+            ,"Supplier Phone": "Teléfono del Proveedor"
+        ,"Customer": "Cliente"
+        ,"Status": "Estado"
+        ,"Total Amount": "Importe Total"
+}

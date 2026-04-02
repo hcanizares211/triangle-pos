@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="{{ app()->getLocale() }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Barcodes</title>
+    <title>{{ __('Barcodes') }}</title>
     <link rel="stylesheet" href="{{ public_path('b3/bootstrap.min.css') }}">
 </head>
 <body>
@@ -19,8 +19,8 @@
                 <div>
                     {!! $barcode !!}
                 </div>
-                <p style="font-size: 15px;color: #000;font-weight: bold;">
-                    Price:: {{ format_currency($price) }}</p>
+                    <p style="font-size: 15px;color: #000;font-weight: bold;">
+                    {{ __('Price') }}:: {{ format_currency($price) }}</p>
             </div>
         @endforeach
     </div>

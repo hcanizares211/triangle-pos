@@ -13,20 +13,20 @@
         <div class="table-responsive position-relative">
             <div wire:loading.flex class="col-12 position-absolute justify-content-center align-items-center" style="top:0;right:0;left:0;bottom:0;background-color: rgba(255,255,255,0.5);z-index: 99;">
                 <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
+                        <span class="sr-only">{{ __('Loading...') }}</span>
+                    </div>
             </div>
             <table class="table table-bordered">
                 <thead class="thead-dark">
                 <tr>
-                    <th class="align-middle">Product</th>
-                    <th class="align-middle text-center">Net Unit Price</th>
-                    <th class="align-middle text-center">Stock</th>
-                    <th class="align-middle text-center">Quantity</th>
-                    <th class="align-middle text-center">Discount</th>
-                    <th class="align-middle text-center">Tax</th>
-                    <th class="align-middle text-center">Sub Total</th>
-                    <th class="align-middle text-center">Action</th>
+                    <th class="align-middle">{{ __('Product') }}</th>
+                    <th class="align-middle text-center">{{ __('Net Unit Price') }}</th>
+                    <th class="align-middle text-center">{{ __('Stock') }}</th>
+                    <th class="align-middle text-center">{{ __('Quantity') }}</th>
+                    <th class="align-middle text-center">{{ __('Discount') }}</th>
+                    <th class="align-middle text-center">{{ __('Tax') }}</th>
+                    <th class="align-middle text-center">{{ __('Sub Total') }}</th>
+                    <th class="align-middle text-center">{{ __('Action') }}</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -80,7 +80,7 @@
                         <tr>
                             <td colspan="8" class="text-center">
                         <span class="text-danger">
-                            Please search & select products!
+                            {{ __('Please search & select products!') }}
                         </span>
                             </td>
                         </tr>
@@ -95,20 +95,20 @@
             <div class="table-responsive">
                 <table class="table table-striped">
                     <tr>
-                        <th>Tax ({{ $global_tax }}%)</th>
+                        <th>{{ __('Tax') }} ({{ $global_tax }}%)</th>
                         <td>(+) {{ format_currency(Cart::instance($cart_instance)->tax()) }}</td>
                     </tr>
                     <tr>
-                        <th>Discount ({{ $global_discount }}%)</th>
+                        <th>{{ __('Discount') }} ({{ $global_discount }}%)</th>
                         <td>(-) {{ format_currency(Cart::instance($cart_instance)->discount()) }}</td>
                     </tr>
                     <tr>
-                        <th>Shipping</th>
+                        <th>{{ __('Shipping') }}</th>
                         <input type="hidden" value="{{ $shipping }}" name="shipping_amount">
                         <td>(+) {{ format_currency($shipping) }}</td>
                     </tr>
                     <tr>
-                        <th>Grand Total</th>
+                        <th>{{ __('Grand Total') }}</th>
                         @php
                             $total_with_shipping = Cart::instance($cart_instance)->total() + (float) $shipping
                         @endphp
@@ -123,22 +123,22 @@
 
     <input type="hidden" name="total_amount" value="{{ $total_with_shipping }}">
 
-    <div class="form-row">
+        <div class="form-row">
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="tax_percentage">Tax (%)</label>
+                <label for="tax_percentage">{{ __('Tax') }} (%)</label>
                 <input wire:model.blur="global_tax" type="number" class="form-control" name="tax_percentage" min="0" max="100" value="{{ $global_tax }}" required>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="discount_percentage">Discount (%)</label>
+                <label for="discount_percentage">{{ __('Discount') }} (%)</label>
                 <input wire:model.blur="global_discount" type="number" class="form-control" name="discount_percentage" min="0" max="100" value="{{ $global_discount }}" required>
             </div>
         </div>
         <div class="col-lg-4">
             <div class="form-group">
-                <label for="shipping_amount">Shipping</label>
+                <label for="shipping_amount">{{ __('Shipping') }}</label>
                 <input wire:model.blur="shipping" type="number" class="form-control" name="shipping_amount" min="0" value="0" required step="0.01">
             </div>
         </div>

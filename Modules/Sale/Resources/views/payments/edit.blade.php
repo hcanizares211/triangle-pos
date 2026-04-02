@@ -4,8 +4,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('sales.index') }}">Sales</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('sales.index') }}">{{ __('Sales') }}</a></li>
         <li class="breadcrumb-item"><a href="{{ route('sales.show', $sale) }}">{{ $sale->reference }}</a></li>
         <li class="breadcrumb-item active">Edit Payment</li>
     </ol>
@@ -29,13 +29,13 @@
                             <div class="form-row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="reference">Reference <span class="text-danger">*</span></label>
+                                        <label for="reference">{{ __('Reference') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="reference" required readonly value="{{ $salePayment->reference }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group">
-                                        <label for="date">Date <span class="text-danger">*</span></label>
+                                        <label for="date">{{ __('Date') }} <span class="text-danger">*</span></label>
                                         <input type="date" class="form-control" name="date" required value="{{ $salePayment->getAttributes()['date'] }}">
                                     </div>
                                 </div>
@@ -44,13 +44,13 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="due_amount">Due Amount <span class="text-danger">*</span></label>
+                                        <label for="due_amount">{{ __('Due Amount') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="due_amount" required value="{{ format_currency($sale->due_amount) }}" readonly>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="amount">Amount <span class="text-danger">*</span></label>
+                                        <label for="amount">{{ __('Amount') }} <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <input id="amount" type="text" class="form-control" name="amount" required value="{{ old('amount') ?? $salePayment->amount }}">
                                             <div class="input-group-append">
@@ -64,7 +64,7 @@
                                 <div class="col-lg-4">
                                     <div class="from-group">
                                         <div class="form-group">
-                                            <label for="payment_method">Payment Method <span class="text-danger">*</span></label>
+                                            <label for="payment_method">{{ __('Payment Method') }} <span class="text-danger">*</span></label>
                                             <select class="form-control" name="payment_method" id="payment_method" required>
                                                 <option {{ $salePayment->payment_method == 'Cash' ? 'selected' : '' }} value="Cash">Cash</option>
                                                 <option {{ $salePayment->payment_method == 'Credit Card' ? 'selected' : '' }} value="Credit Card">Credit Card</option>
@@ -78,7 +78,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="note">Note</label>
+                                <label for="note">{{ __('Note') }}</label>
                                 <textarea class="form-control" rows="4" name="note">{{ old('note') ?? $salePayment->note }}</textarea>
                             </div>
 

@@ -36,25 +36,31 @@ class SuppliersDataTable extends DataTable
             ->orderBy(4)
             ->buttons(
                 Button::make('excel')
-                    ->text('<i class="bi bi-file-earmark-excel-fill"></i> Excel'),
+                    ->text('<i class="bi bi-file-earmark-excel-fill"></i> ' . __('Excel')),
                 Button::make('print')
-                    ->text('<i class="bi bi-printer-fill"></i> Print'),
+                    ->text('<i class="bi bi-printer-fill"></i> ' . __('Print')),
                 Button::make('reset')
-                    ->text('<i class="bi bi-x-circle"></i> Reset'),
+                    ->text('<i class="bi bi-x-circle"></i> ' . __('Reset')),
                 Button::make('reload')
-                    ->text('<i class="bi bi-arrow-repeat"></i> Reload')
-            );
+                    ->text('<i class="bi bi-arrow-repeat"></i> ' . __('Reload'))
+            )
+            ->parameters([
+                'language' => ['url' => '//cdn.datatables.net/plug-ins/1.10.19/i18n/Spanish.json']
+            ]);
     }
 
     protected function getColumns() {
         return [
             Column::make('supplier_name')
+                ->title(__('Supplier Name'))
                 ->className('text-center align-middle'),
 
             Column::make('supplier_email')
+                ->title(__('Supplier Email'))
                 ->className('text-center align-middle'),
 
             Column::make('supplier_phone')
+                ->title(__('Supplier Phone'))
                 ->className('text-center align-middle'),
 
             Column::computed('action')

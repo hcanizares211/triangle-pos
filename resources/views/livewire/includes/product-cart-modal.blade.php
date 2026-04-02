@@ -42,7 +42,7 @@
                             <label>Discount(%) <span class="text-danger">*</span></label>
                             <input wire:model="item_discount.{{ $cart_item->id }}" type="number" class="form-control" value="{{ $item_discount[$cart_item->id] }}" min="0" max="100">
                         @elseif($discount_type[$cart_item->id] == 'fixed')
-                            <label>Discount <span class="text-danger">*</span></label>
+                            <label>{{ __('Discount') }} <span class="text-danger">*</span></label>
                             <input wire:model="item_discount.{{ $cart_item->id }}" type="number" class="form-control" value="{{ $item_discount[$cart_item->id] }}">
                         @endif
                     </div>

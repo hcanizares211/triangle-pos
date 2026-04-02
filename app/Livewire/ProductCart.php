@@ -111,6 +111,11 @@ class ProductCart extends Component
     }
 
     public function removeItem($row_id) {
+        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+            session()->flash('message', 'Cart item not found.');
+            return;
+        }
+
         Cart::instance($this->cart_instance)->remove($row_id);
     }
 
@@ -123,6 +128,10 @@ class ProductCart extends Component
     }
 
     public function updateQuantity($row_id, $product_id) {
+        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+            session()->flash('message', 'Cart item not found.');
+            return;
+        }
         if  ($this->cart_instance == 'sale' || $this->cart_instance == 'purchase_return') {
             if ($this->check_quantity[$product_id] < $this->quantity[$product_id]) {
                 session()->flash('message', 'The requested quantity is not available in stock.');
@@ -157,6 +166,11 @@ class ProductCart extends Component
     }
 
     public function setProductDiscount($row_id, $product_id) {
+        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+            session()->flash('message', 'Cart item not found.');
+            return;
+        }
+
         $cart_item = Cart::instance($this->cart_instance)->get($row_id);
 
         if ($this->discount_type[$product_id] == 'fixed') {
@@ -184,6 +198,11 @@ class ProductCart extends Component
 
     public function updatePrice($row_id, $product_id) {
         $product = Product::findOrFail($product_id);
+
+        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+            session()->flash('message', 'Cart item not found.');
+            return;
+        }
 
         $cart_item = Cart::instance($this->cart_instance)->get($row_id);
 

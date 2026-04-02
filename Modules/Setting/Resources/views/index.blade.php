@@ -4,8 +4,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item active">Settings</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Settings') }}</li>
     </ol>
 @endsection
 
@@ -25,19 +25,19 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_name">Company Name <span class="text-danger">*</span></label>
+                                        <label for="company_name">{{ __('Company Name') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_name" value="{{ $settings->company_name }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_email">Company Email <span class="text-danger">*</span></label>
+                                        <label for="company_email">{{ __('Company Email') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_email" value="{{ $settings->company_email }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="company_phone">Company Phone <span class="text-danger">*</span></label>
+                                        <label for="company_phone">{{ __('Company Phone') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_phone" value="{{ $settings->company_phone }}" required>
                                     </div>
                                 </div>
@@ -46,7 +46,7 @@
                             <div class="form-row">
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="default_currency_id">Default Currency <span class="text-danger">*</span></label>
+                                        <label for="default_currency_id">{{ __('Default Currency') }} <span class="text-danger">*</span></label>
                                         <select name="default_currency_id" id="default_currency_id" class="form-control" required>
                                             @foreach(\Modules\Currency\Entities\Currency::all() as $currency)
                                                 <option {{ $settings->default_currency_id == $currency->id ? 'selected' : '' }} value="{{ $currency->id }}">{{ $currency->currency_name }}</option>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="notification_email">Notification Email <span class="text-danger">*</span></label>
+                                        <label for="notification_email">{{ __('Notification Email') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="notification_email" value="{{ $settings->notification_email }}" required>
                                     </div>
                                 </div>
@@ -74,7 +74,7 @@
                             <div class="form-row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label for="company_address">Company Address <span class="text-danger">*</span></label>
+                                        <label for="company_address">{{ __('Company Address') }} <span class="text-danger">*</span></label>
                                         <input type="text" class="form-control" name="company_address" value="{{ $settings->company_address }}">
                                     </div>
                                 </div>

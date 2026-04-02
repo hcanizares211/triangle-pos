@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
-@section('title', 'Create Role')
+@section('title', __('Create Role'))
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">Roles</a></li>
-        <li class="breadcrumb-item active">Create</li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('roles.index') }}">{{ __('Roles') }}</a></li>
+        <li class="breadcrumb-item active">{{ __('Create') }}</li>
     </ol>
 @endsection
 
@@ -26,20 +26,20 @@
                 <form action="{{ route('roles.store') }}" method="POST">
                     @csrf
                     <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Create Role <i class="bi bi-check"></i>
+                        <button type="submit" class="btn btn-primary">{{ __('Create Role') }} <i class="bi bi-check"></i>
                         </button>
                     </div>
                     <div class="card">
                         <div class="card-body">
                             <div class="form-group">
-                                <label for="name">Role Name <span class="text-danger">*</span></label>
+                                <label for="name">{{ __('Role Name') }} <span class="text-danger">*</span></label>
                                 <input class="form-control" type="text" name="name" required>
                             </div>
 
                             <hr>
 
                             <div class="form-group">
-                                <label for="permissions">Permissions <span class="text-danger">*</span></label>
+                                <label for="permissions">{{ __('Permissions') }} <span class="text-danger">*</span></label>
                             </div>
 
                             <div class="form-group">
@@ -153,7 +153,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_products" name="permissions[]"
                                                                value="show_products" {{ old('show_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_products">View</label>
+                                                        <label class="custom-control-label" for="show_products">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -161,7 +161,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_products" name="permissions[]"
                                                                value="create_products" {{ old('create_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_products">Create</label>
+                                                        <label class="custom-control-label" for="create_products">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -169,7 +169,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_products" name="permissions[]"
                                                                value="edit_products" {{ old('edit_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_products">Edit</label>
+                                                        <label class="custom-control-label" for="edit_products">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -177,7 +177,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_products" name="permissions[]"
                                                                value="delete_products" {{ old('delete_products') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_products">Delete</label>
+                                                        <label class="custom-control-label" for="delete_products">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -185,7 +185,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_product_categories" name="permissions[]"
                                                                value="access_product_categories" {{ old('access_product_categories') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_product_categories">Category</label>
+                                                        <label class="custom-control-label" for="access_product_categories">{{ __('Category') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -222,7 +222,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_adjustments" name="permissions[]"
                                                                value="create_adjustments" {{ old('create_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_adjustments">Create</label>
+                                                        <label class="custom-control-label" for="create_adjustments">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -230,7 +230,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_adjustments" name="permissions[]"
                                                                value="show_adjustments" {{ old('show_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_adjustments">View</label>
+                                                        <label class="custom-control-label" for="show_adjustments">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -238,7 +238,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_adjustments" name="permissions[]"
                                                                value="edit_adjustments" {{ old('edit_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_adjustments">Edit</label>
+                                                        <label class="custom-control-label" for="edit_adjustments">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -246,7 +246,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_adjustments" name="permissions[]"
                                                                value="delete_adjustments" {{ old('delete_adjustments') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_adjustments">Delete</label>
+                                                        <label class="custom-control-label" for="delete_adjustments">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -275,7 +275,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_quotations" name="permissions[]"
                                                                value="create_quotations" {{ old('create_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_quotations">Create</label>
+                                                        <label class="custom-control-label" for="create_quotations">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -283,7 +283,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_quotations" name="permissions[]"
                                                                value="show_quotations" {{ old('show_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_quotations">View</label>
+                                                        <label class="custom-control-label" for="show_quotations">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -291,7 +291,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_quotations" name="permissions[]"
                                                                value="edit_quotations" {{ old('edit_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_quotations">Edit</label>
+                                                        <label class="custom-control-label" for="edit_quotations">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -299,7 +299,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_quotations" name="permissions[]"
                                                                value="delete_quotations" {{ old('delete_quotations') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_quotations">Delete</label>
+                                                        <label class="custom-control-label" for="delete_quotations">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -307,7 +307,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="send_quotation_mails" name="permissions[]"
                                                                value="send_quotation_mails" {{ old('send_quotation_mails') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="send_quotation_mails">Send Email</label>
+                                                        <label class="custom-control-label" for="send_quotation_mails">{{ __('Send Email') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
@@ -344,7 +344,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_expenses" name="permissions[]"
                                                                value="create_expenses" {{ old('create_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_expenses">Create</label>
+                                                        <label class="custom-control-label" for="create_expenses">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -352,7 +352,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_expenses" name="permissions[]"
                                                                value="edit_expenses" {{ old('edit_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_expenses">Edit</label>
+                                                        <label class="custom-control-label" for="edit_expenses">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -360,7 +360,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_expenses" name="permissions[]"
                                                                value="delete_expenses" {{ old('delete_expenses') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_expenses">Delete</label>
+                                                        <label class="custom-control-label" for="delete_expenses">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -368,7 +368,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="access_expense_categories" name="permissions[]"
                                                                value="access_expense_categories" {{ old('access_expense_categories') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="access_expense_categories">Category</label>
+                                                        <label class="custom-control-label" for="access_expense_categories">{{ __('Category') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -397,7 +397,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_customers" name="permissions[]"
                                                                value="create_customers" {{ old('create_customers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_customers">Create</label>
+                                                        <label class="custom-control-label" for="create_customers">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -405,7 +405,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_customers" name="permissions[]"
                                                                value="show_customers" {{ old('show_customers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_customers">View</label>
+                                                        <label class="custom-control-label" for="show_customers">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -413,7 +413,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_customers" name="permissions[]"
                                                                value="edit_customers" {{ old('edit_customers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_customers">Edit</label>
+                                                        <label class="custom-control-label" for="edit_customers">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -421,7 +421,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_customers" name="permissions[]"
                                                                value="delete_customers" {{ old('delete_customers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_customers">Delete</label>
+                                                        <label class="custom-control-label" for="delete_customers">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -450,7 +450,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_suppliers" name="permissions[]"
                                                                value="create_suppliers" {{ old('create_suppliers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_suppliers">Create</label>
+                                                        <label class="custom-control-label" for="create_suppliers">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -458,7 +458,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_suppliers" name="permissions[]"
                                                                value="show_suppliers" {{ old('show_suppliers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_suppliers">View</label>
+                                                        <label class="custom-control-label" for="show_suppliers">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -466,7 +466,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_suppliers" name="permissions[]"
                                                                value="edit_suppliers" {{ old('edit_suppliers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_suppliers">Edit</label>
+                                                        <label class="custom-control-label" for="edit_suppliers">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -474,7 +474,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_customers" name="permissions[]"
                                                                value="delete_customers" {{ old('delete_customers') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_customers">Delete</label>
+                                                        <label class="custom-control-label" for="delete_customers">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                             </div>
@@ -503,7 +503,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_sales" name="permissions[]"
                                                                value="create_sales" {{ old('create_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_sales">Create</label>
+                                                        <label class="custom-control-label" for="create_sales">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -511,7 +511,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_sales" name="permissions[]"
                                                                value="show_suppliers" {{ old('show_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_sales">View</label>
+                                                        <label class="custom-control-label" for="show_sales">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -519,7 +519,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_sales" name="permissions[]"
                                                                value="edit_sales" {{ old('edit_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_sales">Edit</label>
+                                                        <label class="custom-control-label" for="edit_sales">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -527,7 +527,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_sales" name="permissions[]"
                                                                value="delete_sales" {{ old('delete_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_sales">Delete</label>
+                                                        <label class="custom-control-label" for="delete_sales">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -535,7 +535,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_pos_sales" name="permissions[]"
                                                                value="create_pos_sales" {{ old('create_pos_sales') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_pos_sales">POS System</label>
+                                                        <label class="custom-control-label" for="create_pos_sales">{{ __('POS System') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -572,7 +572,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_sale_returns" name="permissions[]"
                                                                value="create_sale_returns" {{ old('create_sale_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_sale_returns">Create</label>
+                                                        <label class="custom-control-label" for="create_sale_returns">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -580,7 +580,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_sale_returns" name="permissions[]"
                                                                value="show_sale_returns" {{ old('show_sale_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_sale_returns">View</label>
+                                                        <label class="custom-control-label" for="show_sale_returns">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -588,7 +588,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_sale_returns" name="permissions[]"
                                                                value="edit_sale_returns" {{ old('edit_sale_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_sale_returns">Edit</label>
+                                                        <label class="custom-control-label" for="edit_sale_returns">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -596,7 +596,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_sale_returns" name="permissions[]"
                                                                value="delete_sale_returns" {{ old('delete_sale_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_sale_returns">Delete</label>
+                                                        <label class="custom-control-label" for="delete_sale_returns">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -633,7 +633,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_purchases" name="permissions[]"
                                                                value="create_purchases" {{ old('create_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_purchases">Create</label>
+                                                        <label class="custom-control-label" for="create_purchases">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -641,7 +641,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_purchases" name="permissions[]"
                                                                value="show_purchases" {{ old('show_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_purchases">View</label>
+                                                        <label class="custom-control-label" for="show_purchases">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -649,7 +649,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_purchases" name="permissions[]"
                                                                value="edit_purchases" {{ old('edit_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_purchases">Edit</label>
+                                                        <label class="custom-control-label" for="edit_purchases">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -657,7 +657,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_purchases" name="permissions[]"
                                                                value="delete_purchases" {{ old('delete_purchases') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_purchases">Delete</label>
+                                                        <label class="custom-control-label" for="delete_purchases">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -694,7 +694,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_purchase_returns" name="permissions[]"
                                                                value="create_purchase_returns" {{ old('create_purchase_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_purchase_returns">Create</label>
+                                                        <label class="custom-control-label" for="create_purchase_returns">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -702,7 +702,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="show_purchase_returns" name="permissions[]"
                                                                value="show_purchase_returns" {{ old('show_purchase_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="show_purchase_returns">View</label>
+                                                        <label class="custom-control-label" for="show_purchase_returns">{{ __('View') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -710,7 +710,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_purchase_returns" name="permissions[]"
                                                                value="edit_purchase_returns" {{ old('edit_purchase_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_purchase_returns">Edit</label>
+                                                        <label class="custom-control-label" for="edit_purchase_returns">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -718,7 +718,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_purchase_returns" name="permissions[]"
                                                                value="delete_purchase_returns" {{ old('delete_purchase_returns') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_purchase_returns">Delete</label>
+                                                        <label class="custom-control-label" for="delete_purchase_returns">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -755,7 +755,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="create_currencies" name="permissions[]"
                                                                value="create_currencies" {{ old('create_currencies') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="create_currencies">Create</label>
+                                                        <label class="custom-control-label" for="create_currencies">{{ __('Create') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -763,7 +763,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="edit_currencies" name="permissions[]"
                                                                value="edit_currencies" {{ old('edit_currencies') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="edit_currencies">Edit</label>
+                                                        <label class="custom-control-label" for="edit_currencies">{{ __('Edit') }}</label>
                                                     </div>
                                                 </div>
                                                 <div class="col-6">
@@ -771,7 +771,7 @@
                                                         <input type="checkbox" class="custom-control-input"
                                                                id="delete_currencies" name="permissions[]"
                                                                value="delete_currencies" {{ old('delete_currencies') ? 'checked' : '' }}>
-                                                        <label class="custom-control-label" for="delete_currencies">Delete</label>
+                                                        <label class="custom-control-label" for="delete_currencies">{{ __('Delete') }}</label>
                                                     </div>
                                                 </div>
                                             </div>

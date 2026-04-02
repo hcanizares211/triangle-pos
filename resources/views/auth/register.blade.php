@@ -22,7 +22,7 @@
                 <div class="card-body p-4">
                     <form method="post" action="{{ url('/register') }}">
                         @csrf
-                        <h1>Register</h1>
+                        <h1>{{ __('Register') }}</h1>
                         <p class="text-muted">Create your account</p>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">

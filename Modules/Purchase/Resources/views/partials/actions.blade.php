@@ -17,7 +17,7 @@
         @endcan
         @can('edit_purchases')
             <a href="{{ route('purchases.edit', $data->id) }}" class="dropdown-item">
-                <i class="bi bi-pencil mr-2 text-primary" style="line-height: 1;"></i> Edit
+                <i class="bi bi-pencil mr-2 text-primary" style="line-height: 1;"></i> {{ __('Edit') }}
             </a>
         @endcan
         @can('show_purchases')
@@ -31,7 +31,7 @@
                 if (confirm('Are you sure? It will delete the data permanently!')) {
                 document.getElementById('destroy{{ $data->id }}').submit()
                 }">
-                <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> Delete
+                <i class="bi bi-trash mr-2 text-danger" style="line-height: 1;"></i> {{ __('Delete') }}
                 <form id="destroy{{ $data->id }}" class="d-none" action="{{ route('purchases.destroy', $data->id) }}" method="POST">
                     @csrf
                     @method('delete')

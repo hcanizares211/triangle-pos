@@ -1,13 +1,13 @@
 @if ($data->status == 'Pending')
     <span class="badge badge-info">
-        {{ $data->status }}
+        {{ __('Pending') }}
     </span>
 @elseif ($data->status == 'Shipped')
     <span class="badge badge-primary">
-        {{ $data->status }}
+        {{ __('Shipped') }}
     </span>
 @else
     <span class="badge badge-success">
-        {{ $data->status }}
+        {{ __($data->status) }}
     </span>
 @endif

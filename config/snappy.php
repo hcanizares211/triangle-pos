@@ -35,8 +35,9 @@ return [
 
     'pdf' => [
         'enabled' => true,
-        //'binary'  => env('WKHTML_PDF_BINARY', base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64'),),
-        'binary'  => env('WKHTML_PDF_BINARY', 'C:\\wkhtmltopdf\\bin\\wkhtmltopdf.exe'),
+        // Use vendor-provided wkhtmltopdf binary by default on non-Windows systems.
+        // You can override with env WKHTML_PDF_BINARY for custom paths (Windows or system installs).
+        'binary'  => env('WKHTML_PDF_BINARY', base_path('vendor/h4cc/wkhtmltopdf-amd64/bin/wkhtmltopdf-amd64')),
         'timeout' => false,
         'options' => [
             'enable-local-file-access' => true,

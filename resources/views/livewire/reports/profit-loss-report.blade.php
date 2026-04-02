@@ -27,8 +27,7 @@
                         <div class="form-group mb-0">
                             <button type="submit" class="btn btn-primary">
                                 <span wire:target="generateReport" wire:loading class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i>
-                                Filter Report
+                                <i wire:target="generateReport" wire:loading.remove class="bi bi-shuffle"></i> {{ __('Filter Report') }}
                             </button>
                         </div>
                     </form>
@@ -75,7 +74,7 @@
                     </div>
                     <div>
                         <div class="text-value text-primary">{{ format_currency($profit_amount) }}</div>
-                        <div class="text-uppercase font-weight-bold small">Profit</div>
+                        <div class="text-uppercase font-weight-bold small">{{ __('Profit') }}</div>
                     </div>
                 </div>
             </div>
@@ -117,7 +116,7 @@
                     </div>
                     <div>
                         <div class="text-value text-primary">{{ format_currency($expenses_amount) }}</div>
-                        <div class="text-uppercase font-weight-bold small">Expenses</div>
+                        <div class="text-uppercase font-weight-bold small">{{ __('Expenses') }}</div>
                     </div>
                 </div>
             </div>

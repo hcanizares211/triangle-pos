@@ -1,27 +1,30 @@
+version: '3.8'
+
 services:
   web:
-    image: triangle-pos:latest
     build:
       context: .
-    env_file:
-      - .env
-    ports:
-      - "8000:8000"
+    container_name: triangle_web
+    working_dir: /var/www/html
     volumes:
       - .:/var/www/html
+    ports:
+      - "8000:8000"
     depends_on:
       - db
-
-  db:
-    platform: "linux/amd64"
-    image: mysql:latest
     env_file:
       - .env
+    command: php artisan serve --host=0.0.0.0 --port=8000
+
+  db:
+    image: mysql:8.0
+    container_name: triangle_db
+    restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: ${DB_DATABASE}
-      MYSQL_USER: ${DB_USERNAME}
-      MYSQL_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: triangle
+      MYSQL_USER: triangle
+      MYSQL_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
@@ -29,5 +32,3 @@ services:
 
 volumes:
   dbdata:
-
-

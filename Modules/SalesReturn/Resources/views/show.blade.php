@@ -4,8 +4,8 @@
 
 @section('breadcrumb')
     <ol class="breadcrumb border-0 m-0">
-        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
-        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">Sale Returns</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">{{ __('Home') }}</a></li>
+        <li class="breadcrumb-item"><a href="{{ route('sale-returns.index') }}">{{ __('Sale Returns') }}</a></li>
         <li class="breadcrumb-item active">Details</li>
     </ol>
 @endsection
@@ -20,10 +20,10 @@
                             Reference: <strong>{{ $sale_return->reference }}</strong>
                         </div>
                         <a target="_blank" class="btn btn-sm btn-secondary mfs-auto mfe-1 d-print-none" href="{{ route('sale-returns.pdf', $sale_return->id) }}">
-                            <i class="bi bi-printer"></i> Print
+                            <i class="bi bi-printer"></i> {{ __('Print') }}
                         </a>
                         <a target="_blank" class="btn btn-sm btn-info mfe-1 d-print-none" href="{{ route('sale-returns.pdf', $sale_return->id) }}">
-                            <i class="bi bi-save"></i> Save
+                            <i class="bi bi-save"></i> {{ __('Save') }}
                         </a>
                     </div>
                     <div class="card-body">
@@ -62,12 +62,12 @@
                             <table class="table table-striped">
                                 <thead>
                                 <tr>
-                                    <th class="align-middle">Product</th>
+                                    <th class="align-middle">{{ __('Product') }}</th>
                                     <th class="align-middle">Net Unit Price</th>
-                                    <th class="align-middle">Quantity</th>
-                                    <th class="align-middle">Discount</th>
-                                    <th class="align-middle">Tax</th>
-                                    <th class="align-middle">Sub Total</th>
+                                    <th class="align-middle">{{ __('Quantity') }}</th>
+                                    <th class="align-middle">{{ __('Discount') }}</th>
+                                    <th class="align-middle">{{ __('Tax') }}</th>
+                                    <th class="align-middle">{{ __('Sub Total') }}</th>
                                 </tr>
                                 </thead>
                                 <tbody>
