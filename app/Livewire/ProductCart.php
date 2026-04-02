@@ -111,11 +111,6 @@ class ProductCart extends Component
     }
 
     public function removeItem($row_id) {
-        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
-            session()->flash('message', 'Cart item not found.');
-            return;
-        }
-
         Cart::instance($this->cart_instance)->remove($row_id);
     }
 
@@ -128,10 +123,12 @@ class ProductCart extends Component
     }
 
     public function updateQuantity($row_id, $product_id) {
-        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
-            session()->flash('message', 'Cart item not found.');
-            return;
+        // Refresh row_id in case it became stale after a re-render
+        $found = Cart::instance($this->cart_instance)->search(fn($item) => $item->id == $product_id);
+        if ($found->isNotEmpty()) {
+            $row_id = $found->first()->rowId;
         }
+
         if  ($this->cart_instance == 'sale' || $this->cart_instance == 'purchase_return') {
             if ($this->check_quantity[$product_id] < $this->quantity[$product_id]) {
                 session()->flash('message', 'The requested quantity is not available in stock.');
@@ -166,7 +163,11 @@ class ProductCart extends Component
     }
 
     public function setProductDiscount($row_id, $product_id) {
-        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+        // Refresh row_id in case it became stale after a re-render
+        $found = Cart::instance($this->cart_instance)->search(fn($item) => $item->id == $product_id);
+        if ($found->isNotEmpty()) {
+            $row_id = $found->first()->rowId;
+        } elseif (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
             session()->flash('message', 'Cart item not found.');
             return;
         }
@@ -199,16 +200,22 @@ class ProductCart extends Component
     public function updatePrice($row_id, $product_id) {
         $product = Product::findOrFail($product_id);
 
-        if (!Cart::instance($this->cart_instance)->content()->has($row_id)) {
+        // rowId from the browser may be stale after a re-render; look up the
+        // current rowId by product id to be safe.
+        $cart = Cart::instance($this->cart_instance);
+        $found = $cart->search(fn($item) => $item->id == $product_id);
+
+        if ($found->isEmpty()) {
             session()->flash('message', 'Cart item not found.');
             return;
         }
 
-        $cart_item = Cart::instance($this->cart_instance)->get($row_id);
+        $row_id   = $found->first()->rowId;
+        $cart_item = $cart->get($row_id);
 
-        Cart::instance($this->cart_instance)->update($row_id, ['price' => $this->unit_price[$product['id']]]);
+        $cart->update($row_id, ['price' => $this->unit_price[$product['id']]]);
 
-        Cart::instance($this->cart_instance)->update($row_id, [
+        $cart->update($row_id, [
             'options' => [
                 'sub_total'             => $this->calculate($product, $this->unit_price[$product['id']])['sub_total'],
                 'code'                  => $cart_item->options->code,
