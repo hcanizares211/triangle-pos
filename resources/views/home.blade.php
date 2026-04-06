@@ -125,5 +125,14 @@
 @endsection
 
 @push('page_scripts')
+    <script>
+        window.chartLabels = {
+            sales:           "{{ __('Sales') }}",
+            purchases:       "{{ __('Purchases') }}",
+            expenses:        "{{ __('Expenses') }}",
+            payment_sent:    "{{ __('Payment Sent') }}",
+            payment_received:"{{ __('Payment Received') }}",
+        };
+    </script>
     @vite('resources/js/chart-config.js')
 @endpush

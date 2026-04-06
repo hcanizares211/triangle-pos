@@ -78,7 +78,7 @@
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <label for="paid_amount">Amount Paid <span class="text-danger">*</span></label>
+                                        <label for="paid_amount">{{ __('Amount Paid') }} <span class="text-danger">*</span></label>
                                         <input id="paid_amount" type="text" class="form-control" name="paid_amount" required value="{{ $purchase_return->paid_amount }}" readonly>
                                     </div>
                                 </div>
